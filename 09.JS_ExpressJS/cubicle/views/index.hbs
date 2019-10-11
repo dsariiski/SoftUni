@@ -1,0 +1,17 @@
+<main>
+  {{> searchForm}}
+
+  {{#each cubes}}
+  <div class="cube">
+    <img class="cube" src="{{imageUrl}}">
+    <p class="name">{{name}}</p>
+    <p><span>Difficulty level:</span> {{difficultyLevel}}</p>
+    <a class="btn" href="/cube/details/{{id}}">Details</a>
+    <a class='btn' href="/accessory/attach/{{id}}">Accessories</a>
+  </div>
+  {{else}}
+  <div class="cube">
+    <p>No cubes match the criterion.</p>
+  </div>
+  {{/each}}
+</main>
